@@ -113,6 +113,7 @@ public:
 	bool GetGroupHeaderRect2(size_t atItem,CRect & p_rect) const;
 	CRect GetItemRectAbs(t_size p_item) const;
 	int GetItemOffsetAbs(size_t item) const;
+	int GetItemOffsetAbs2(size_t from, size_t to) const;
 	int GetItemBottomOffsetAbs(size_t item) const;
 	int GetItemHeightCached(size_t item) const;
 	int GetItemContentHeightCached(size_t item) const;

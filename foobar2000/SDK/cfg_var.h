@@ -29,6 +29,8 @@ namespace cfg_var_modern {
 		void operator=(const char* v) { set(v); }
 
 		pfc::string8 get_value() { return get(); }
+
+		operator pfc::string8() { return get(); }
 	private:
 #ifdef FOOBAR2000_HAVE_CFG_VAR_LEGACY
 		void set_data_raw(stream_reader* p_stream, t_size p_sizehint, abort_callback& p_abort) override;

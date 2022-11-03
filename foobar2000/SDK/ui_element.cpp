@@ -243,7 +243,11 @@ bool ui_config_manager::is_dark_mode() {
 	if (this->query_color(ui_color_darkmode, clr)) return clr == 0;
 	return false;
 }
-
+bool ui_config_manager::g_is_dark_mode() {
+	auto api = tryGet();
+	if (api.is_valid()) return api->is_dark_mode();
+	else return false;
+}
 #ifdef _WIN32
 t_ui_color ui_config_manager::getSysColor(int sysColorIndex) {
 	GUID guid = ui_color_from_sys_color_index(sysColorIndex);
